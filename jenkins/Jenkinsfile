@@ -5,7 +5,12 @@ pipeline {
             steps {
                 echo 'Job Starting'
             }
-        }        
+        }    
+        stage('Build #3') {
+            steps {
+                echo 'Job Starting test'
+            }
+        }  
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
